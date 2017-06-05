@@ -1,0 +1,28 @@
+1. 移除全局用户名
+git config --global --unset user.name
+
+2. 如果某个服务器仓库是空仓库，想要提交代码，应该按照以下方式：
+git init
+touch 1.txt
+git add *
+git commit -m xxx
+git push xxx master
+
+2. 如果某个仓库已经不是空仓库，想要提交代码，应该按照以下方式：
+git init                         -->让本地有了仓库
+git pull 服务器仓库地址 master     -->将本地仓库和远程仓库形成仓库，后面就可以实现同时开发
+
+3. 把远程仓库的代码更新到本地
+git pull 服务器仓库地址 master
+
+4. 把本地仓库代码更新到服务器
+git push 服务器仓库地址 master
+
+5. 保存服务器地址
+git remote add 名字 地址(https://xxx.git)
+
+6. 删除服务器地址
+git remote remove 名字
+
+7. 查看已经保存了的服务器名字
+git remote
